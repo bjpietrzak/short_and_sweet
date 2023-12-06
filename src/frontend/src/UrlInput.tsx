@@ -18,7 +18,7 @@ const UrlInput: React.FC<UrlInputProps> = ({ onUrlSubmitted }) => {
         const response = await axios.get(`http://0.0.0.0:7001/app_data/?url=${encodeURIComponent(url)}`);
 
         if (response.status === 200) {
-            console.log(response.data.app_id)
+            console.log(response.data)
           onUrlSubmitted(response.data.app_id);
         } else {
           console.error('Error sending URL:', response.statusText);

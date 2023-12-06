@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 
 class ModelInferenceRequest(BaseModel):
-    Reviews: List[str]
+    reviews: List[str]
 
 
 class BERTopicInferenceResponse(BaseModel):
