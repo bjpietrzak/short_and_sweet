@@ -1,20 +1,16 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from httpx import AsyncClient
-import time
+import lorem
+import random
 
-from app import config
-from app.reviews import AppData, ReviewsData, Reviews
-from app.scrape import (validate_url, extract_app_id,
-                        scrape_app_data, scrape_app_reviews)
-
-
+from . import number_of_reviews, clusters
+from app.schemas import AppData, DistilBertResponse, \
+                        BertopicInferenceResponse, ClusterReviews
 
 
 app = FastAPI(prefix='/backend')
 
 origins = ["*"]
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -24,49 +20,62 @@ app.add_middleware(
 )
 
 @app.get('/app_data/')
-async def app_data(url: str, stars: int = None, count: int = 10) -> AppData:
-    print('got here?')
-    print(url)
-    if not validate_url(url):
-        raise HTTPException(status_code=404, detail='Invalid URL')
+async def app_data(url: str, stars: int = None, count: int = 10,
+                   inssuficien: bool = False,
+                   invalid_url: bool = False) -> AppData:
+    if invalid_url:
+        raise HTTPException(status_code=404,
+                            detail='Invalid URL. Make sure URL is ' +
+                                   'from english version of the site.')
 
-    app_id = extract_app_id(url)
-    if app_id is None:
-        raise HTTPException(status_code=404, detail='Invalid URL')
+    if inssuficien:
+        raise HTTPException(status_code=404, detail='App did not recive ' +
+                                                    'sufficient number of reviews')
 
-    app_data = scrape_app_data(app_id)
-    if app_data is None:
-        raise HTTPException(status_code=404, detail='App not found')
-    if app_data.reviews < config['scraping']['min_reviews']:
-        raise HTTPException(status_code=404, detail='Not enough reviews'
-                            f'({app_data.reviews} < {config["scraping"]["min_reviews"]})')
-    return app_data
+    response = AppData(
+        title='Google Maps',
+        icon='https://play-lh.googleusercontent.com/Kf8WTct65hFJxBUDm5E-EpYsiDoLQiGGbnuyP6HBNax43YShXti9THPon1YKB6zPYpA',
+        reviews=2239)
 
+    return response
 
-@app.get('/get_reviews/')
-async def get_reviews(app_id: str, stars: int = None,
-                      count: int = 10) -> ReviewsData:
-        print('results here')
-        results = scrape_app_reviews(app_id, stars, count)
-        if results.small_nb_of_reviews is not None and \
-           results.small_nb_of_reviews < config['scraping']['min_reviews']:
-            raise HTTPException(status_code=404, detail='Not enough reviews'
-                                f'({results.small_nb_of_reviews} < {count})')
-        return results
 
 @app.get('/request_inference/bertopic/')
-async def request_inference_bertopic() -> str:
-    async with AsyncClient() as client:
-        response = await client.get(f'{config["inference"]["bertopic_url"]}/bertopic/',
-                                    params={"reviews": request.reviews})
-        return response.json()
+async def request_inference_bertopic() -> BertopicInferenceResponse:
+    response = BertopicInferenceResponse(
+        topics={
+            0:"phone_app_service_picture",
+            1:"instagram_time_bad_habbit",
+            2:"cant_open_camera_error"
+        },
+        counts={
+            0: 990,
+            1: 201,
+            2: 40
+        })
+    return response
 
-async def inference_transformers() -> str:
-    async with AsyncClient() as client:
-        response = await client.get(f'{config["inference"]["transformers_url"]}/transformers/',
-                                    params={"reviews": request.reviews})
-        return response.json()
+@app.get('/request_inference/distilbert/')
+async def request_inference_distilbert() -> DistilBertResponse:
+    response = DistilBertResponse(
+        positive=2402,
+        neutral=10,
+        negative=90)
+    return response
 
-@app.get('/healthckeck/')
-async def healthcheck() -> str:
-    return 'OK'
+@app.get('/more_data/')
+async def more_data(cluster: int,
+                    results_not: bool = False) -> ClusterReviews:
+    if results_not:
+        raise HTTPException(status_code=404, detail='Results are not ready.')
+    if cluster not in number_of_reviews:
+        raise HTTPException(status_code=404, detail='Cluster not found.')
+
+    reviews = [{"review": lorem.paragraph(),
+                "thumbs_up_count": random.randint(0, 100),
+                "sentiment": random.choice([-1,0,1])}
+                for _ in range(number_of_reviews[cluster])]
+    return ClusterReviews(
+        cluster=clusters[cluster],
+        reviews=reviews
+    )
