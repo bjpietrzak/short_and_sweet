@@ -17,7 +17,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 if __name__ == '__main__':
     run("main:app", host=BACKEND['host'], port=BACKEND['port']
         , log_level='info', reload=True)

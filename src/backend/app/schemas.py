@@ -7,6 +7,12 @@ class ProcessedReview(BaseModel):
     thumbs_up_count: int
     sentiment: int
 
+
+class DetailedResponse(BaseModel):
+    cluster: str
+    reviews: List[ProcessedReview]
+
+
 class ReviewsData(BaseModel):
     reviews: List[str] = None
     thumbs_up_count: List[int] = None
@@ -40,8 +46,3 @@ class Review(BaseModel):
 class ClusterReviews(BaseModel):
     cluster: str
     reviews: List[Review]
-
-
-class DetailedResponse(BaseModel):
-    cluster: str
-    reviews: List[ProcessedReview]

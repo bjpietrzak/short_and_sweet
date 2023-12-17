@@ -1,6 +1,7 @@
 {
     "invalidUrl": "Invalid URL. Make sure URL is from english version of the site",
     "insufficientReviews": "App did not recive sufficient number of reviews",
+    "invalidCount": "Number of reviews exceeds the limit",
     "noCachedReviews": "No cached values under given key",
     "inferenceError": "Error occured during inference",
     "resultsNotReady": "Results are not ready",

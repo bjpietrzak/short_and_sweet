@@ -1,6 +1,6 @@
 {
     "setup": {
-        "host": "0.0.0.0",
+        "host": "cache",
         "port": 6379
     },
 

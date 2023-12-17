@@ -17,7 +17,6 @@ def get_indexes(reviews: list, key: int) -> list:
 @app.post('/inference/bertopic', response_model=BERTopicInferenceResponse)
 async def bertopic(request: InferenceRequest):
     topic_nb = randint(1, 11)
-    print(topic_nb)
     topics = [sentence() for key in range(topic_nb)]
     document_classification = np.random.randint(-1, topic_nb, size=len(request.reviews)).tolist()
     representative_reviews = [choice(get_indexes(document_classification, i))

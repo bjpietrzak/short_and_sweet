@@ -1,0 +1,26 @@
+{
+    "scraping": {
+        "url_pattern": "^https://play\\.google\\.com/store/apps/details\\?id=[a-zA-Z0-9.]+&hl=en$",
+        "id_pattern": "id=([a-zA-Z0-9.]+)&",
+        "min_reviews": 2000
+    },
+
+    "backend": {
+        "host": "0.0.0.0",
+        "port": 7001,
+        "redis": {
+            "host": "0.0.0.0",
+            "port": 6379
+        },
+
+        "app_data": {
+            "url": "http://0.0.0.0:7001/app_data/?",
+            "data": ["url"]
+        }
+    },
+
+    "inference": {
+        "bertopic": "http://0.0.0.0:7070/bertopic/fit_transform/",
+        "distilbert": "http://0.0.0.0:7070/distilbert/fit_transform/"
+    }
+}

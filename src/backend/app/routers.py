@@ -1,63 +1,32 @@
 from fastapi import APIRouter, HTTPException
-from httpx import AsyncClient
-from typing import List, Dict
 
-from setup import ERRORS, BACKEND, ENDPOINTS
+from setup import ERRORS, BACKEND, ENDPOINTS, logging
 from cache_management import redis_client as rc
-from schemas import AppData, DistilBertResponse, BertopicInferenceResponse
-from scrape import validate_url, extract_app_id, scrape_app_data, scrape_app_reviews
+from schemas import AppData, DistilBertResponse, BertopicInferenceResponse, \
+                    DetailedResponse
 
+from utils import check_count, validate_app_data, validate_app_reviews, \
+                    request_inference, get_topic_reviews
 
 router = APIRouter()
-
-async def fetch_inference_result(url: str, payload: dict) -> dict:
-    async with AsyncClient() as client:
-        response = await client.post(url, json=payload)
-    if response.status_code != 200:
-        raise HTTPException(status_code=404, detail=ERRORS['inferenceError'])
-    return response.json()
-
-def get_topic_reviews(key: int, representative_idx: int,
-                      reviews: List[str], thumbs_up_count: List[int],
-                      sentiment_classification: List[int],
-                      review_classification: List[int]) -> List[Dict]:
-    topic_classification = (i for i, x in enumerate(review_classification)
-                            if int(x) == key)
-    return [
-        {
-            'review': reviews[i],
-            'thumbs_up_count': thumbs_up_count[i],
-            'sentiment': sentiment_classification[i]
-        }
-        for i in topic_classification if i != representative_idx
-    ]
 
 @router.get('/app_data/')
 async def app_data(url: str, stars: int = None,
                    count: int = BACKEND['min_reviews']) -> AppData:
+    logging.debug('app_data function called with url: %s, stars: %s, count: %s', url, stars, count)
     rc.clear_all()
-    if not validate_url(url):
-        raise HTTPException(status_code=404, detail=ERRORS['invalidUrl'])
-
-    app_id = extract_app_id(url)
-    app_data = scrape_app_data(app_id)
-    if app_data is None or app_data.reviews < BACKEND['min_reviews']:
-        raise HTTPException(status_code=404, detail=ERRORS['invalidUrl'])
-
-    app_reviews = scrape_app_reviews(app_id, stars, count)
-    if app_reviews.length < BACKEND['min_reviews']:
-        raise HTTPException(status_code=404,
-                            detail=ERRORS['insufficientReviews'])
+    check_count(count)
+    app_id, app_data = validate_app_data(url)
+    app_reviews = validate_app_reviews(app_id, stars, count)
 
     rc.cache('reviews', app_reviews.reviews)
     rc.cache('thumbs_up_count', app_reviews.thumbs_up_count)
     return app_data
 
 @router.get('/request_inference/bertopic/')
-async def request_inference_bertopic():
-    reviews = rc.get_cache('reviews')
-    response = await fetch_inference_result(ENDPOINTS['bertopic'],
-                                            {"reviews": reviews})
+async def request_inference_bertopic() -> BertopicInferenceResponse:
+    logging.debug('request_inference_bertopic function called')
+    response = await request_inference('bertopic')
 
     rc.cache('review_classification', response['classification'])
     rc.cache('topics', response['topics'])
@@ -71,42 +40,45 @@ async def request_inference_bertopic():
 
 @router.get('/request_inference/distilbert/')
 async def request_inference_distilbert() -> DistilBertResponse:
-    reviews = rc.get_cache('reviews')
-    response = await fetch_inference_result(ENDPOINTS['distilbert'],
-                                            {"reviews": reviews})
+    logging.debug('request_inference_distilbert function called')
+    response = await request_inference('distilbert')
 
     rc.cache('sentiment_classification', response['classification'])
 
     classification_counts = {
         sentiment: response['classification'].count(sentiment)
-        for sentiment in [-1, 0, 1]
+            for sentiment in [ENDPOINTS['positive'],
+                              ENDPOINTS['neutral'],
+                              ENDPOINTS['negative']]
     }
-    return DistilBertResponse(positive=classification_counts[1],
-                              negative=classification_counts[-1],
-                              neutral=classification_counts[0])
+    return DistilBertResponse(
+        positive=classification_counts[ENDPOINTS['positive']],
+        neutral=classification_counts[ENDPOINTS['neutral']],
+        negative=classification_counts[ENDPOINTS['negative']])
 
 @router.get('/more_data/')
-async def more_data(topic: int):
+async def more_data(topic: int) -> DetailedResponse:
+    logging.debug('more_data function called with topic: %s', topic)
     if not rc.ready():
         raise HTTPException(status_code=404, detail=ERRORS['resultsNotReady'])
+    reviews, thumbs_up_count, representative_reviews, review_classification, \
+        sentiment_classification, topics = rc.get_more_data()
 
-    topics = rc.get_cache('topics')
     if topic >= len(topics):
         raise HTTPException(status_code=404, detail=ERRORS['invalidKey'])
 
-    reviews = rc.get_cache('reviews')
-    review_classification = rc.get_cache('review_classification')
-    thumbs_up_count = rc.get_cache('thumbs_up_count')
-    sentiment_classification = rc.get_cache('sentiment_classification')
-    representative_reviews = rc.get_cache('representative_reviews')
-
     representative_idx = int(representative_reviews[topic])
-    all_topic_reviews = get_topic_reviews(topic, representative_idx,
-                                          reviews, thumbs_up_count,
+    all_topic_reviews = get_topic_reviews(topic,
+                                          representative_idx,
+                                          reviews,
+                                          thumbs_up_count,
                                           sentiment_classification,
                                           review_classification)
-    return all_topic_reviews
+    response = DetailedResponse(cluster=topics[topic],
+                                reviews=all_topic_reviews)
+    return response
 
 @router.get('/healthcheck/')
 async def healthcheck() -> str:
+    logging.debug('healthcheck function called')
     return 'OK'

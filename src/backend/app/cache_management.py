@@ -1,6 +1,8 @@
 from redis import Redis
+from fastapi import HTTPException
+from typing import Tuple
 
-from setup import redisCli, REDIS
+from setup import REDIS, ERRORS
 
 
 class RedisClient:
@@ -21,6 +23,8 @@ class RedisClient:
             self.redis.set(key, value)
 
     def get_cache(self, key: str) -> list | dict | str:
+        if not self.redis.exists(key):
+            raise KeyError(f"Key '{key}' does not exist in cache.")
         data_type = self.redis.type(key)
         if data_type == 'list':
             return self.redis.lrange(key, 0, -1)
@@ -32,6 +36,25 @@ class RedisClient:
             return None
 
     def ready(self) -> bool:
-        return self.redis.exists(*REDIS['dependencies'])
+        return self.redis.exists(*REDIS['dependencies']) == \
+                                 len(REDIS['dependencies'])
 
+    def ping(self) -> bool:
+        return self.redis.ping()
+    
+    def get_more_data(self) -> Tuple[list, list, list,
+                                     list, list, list]:
+        if not self.ready():
+            raise HTTPException(status_code=400,
+                                detail=ERRORS['resultsNotReady'])
+        else:
+            return (self.get_cache(key) for key in REDIS['dependencies'])
+
+
+redisCli = Redis(
+    host=REDIS['setup']['host'],
+    port=REDIS['setup']['port'],
+    charset="utf-8",
+    decode_responses=True)
 redis_client = RedisClient(redisCli)
+redis_client.ping()

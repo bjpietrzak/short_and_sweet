@@ -1,7 +1,8 @@
 {
     "host": "0.0.0.0",
-    "port": 7000,
-    "url_pattern": "^https://play\\.google\\.com/store/apps/details\\?id=[a-zA-Z0-9.]+&hl=en$",
+    "port": 7001,
+    "url_pattern": "^https://play\\.google\\.com/store/apps/details\\?id=[a-zA-Z0-9.]+&hl=en(&.+)*$",
     "id_pattern": "id=([a-zA-Z0-9.]+)&",
-    "min_reviews": 20
+    "min_reviews": 20,
+    "max_reviews": 3000
 }
