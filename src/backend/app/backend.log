@@ -1,3 +1,412 @@
 2023-12-12 14:04:23,609 INFO root Redis connection: True
 2023-12-12 14:05:12,080 INFO root Redis connection: True
 2023-12-12 14:05:26,232 INFO root Redis connection: True
+2023-12-22 12:10:51,455 DEBUG asyncio Using selector: EpollSelector
+2023-12-22 12:13:40,965 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=pl&gl=US, stars: 1, count: 200
+2023-12-22 12:14:03,015 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: 1, count: 200
+2023-12-22 13:25:08,289 DEBUG asyncio Using selector: EpollSelector
+2023-12-22 13:38:19,348 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: None, count: 200
+2023-12-22 13:40:39,718 DEBUG asyncio Using selector: EpollSelector
+2023-12-22 13:40:50,356 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: None, count: 200
+2023-12-22 13:41:00,140 DEBUG root request_inference_distilbert function called
+2023-12-22 13:41:00,142 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 13:41:00,142 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 13:41:00,153 DEBUG httpcore.connection connect_tcp.started host='0.0.0.0' port=8080 local_address=None timeout=5.0 socket_options=None
+2023-12-22 13:41:00,154 DEBUG httpcore.connection connect_tcp.failed exception=ConnectError(OSError('All connection attempts failed'))
+2023-12-22 13:44:25,498 DEBUG root request_inference_distilbert function called
+2023-12-22 13:44:25,499 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 13:44:25,500 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 13:44:25,509 DEBUG httpcore.connection connect_tcp.started host='0.0.0.0' port=8080 local_address=None timeout=5.0 socket_options=None
+2023-12-22 13:44:25,510 DEBUG httpcore.connection connect_tcp.failed exception=ConnectError(OSError('All connection attempts failed'))
+2023-12-22 13:44:26,270 DEBUG root request_inference_distilbert function called
+2023-12-22 13:44:26,271 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 13:44:26,272 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 13:44:26,280 DEBUG httpcore.connection connect_tcp.started host='0.0.0.0' port=8080 local_address=None timeout=5.0 socket_options=None
+2023-12-22 13:44:26,280 DEBUG httpcore.connection connect_tcp.failed exception=ConnectError(OSError('All connection attempts failed'))
+2023-12-22 13:44:28,765 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: None, count: 200
+2023-12-22 13:47:14,326 DEBUG asyncio Using selector: EpollSelector
+2023-12-22 13:47:49,428 DEBUG root request_inference_distilbert function called
+2023-12-22 13:47:58,050 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: None, count: 200
+2023-12-22 13:48:02,327 DEBUG root request_inference_distilbert function called
+2023-12-22 13:48:02,328 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 13:48:02,328 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 13:48:02,334 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=5.0 socket_options=None
+2023-12-22 13:48:02,335 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fa9cd1978d0>
+2023-12-22 13:48:02,335 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 13:48:02,335 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 13:48:02,335 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 13:48:02,336 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 13:48:02,336 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 13:48:02,355 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'date', b'Fri, 22 Dec 2023 13:48:02 GMT'), (b'server', b'uvicorn'), (b'content-length', b'21'), (b'content-type', b'text/plain; charset=utf-8')])
+2023-12-22 13:48:02,356 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 500 Internal Server Error"
+2023-12-22 13:48:02,356 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 13:48:02,356 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 13:48:02,356 DEBUG httpcore.http11 response_closed.started
+2023-12-22 13:48:02,356 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 13:48:02,356 DEBUG httpcore.connection close.started
+2023-12-22 13:48:02,356 DEBUG httpcore.connection close.complete
+2023-12-22 13:49:21,493 DEBUG root request_inference_distilbert function called
+2023-12-22 13:49:21,494 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 13:49:21,494 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 13:49:21,501 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=5.0 socket_options=None
+2023-12-22 13:49:21,501 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fa9ccfed710>
+2023-12-22 13:49:21,502 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 13:49:21,502 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 13:49:21,502 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 13:49:21,502 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 13:49:21,502 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 13:49:21,523 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 13:49:20 GMT'), (b'server', b'uvicorn'), (b'content-length', b'27'), (b'content-type', b'application/json')])
+2023-12-22 13:49:21,523 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 13:49:21,524 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 13:49:21,524 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 13:49:21,524 DEBUG httpcore.http11 response_closed.started
+2023-12-22 13:49:21,524 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 13:49:21,524 DEBUG httpcore.connection close.started
+2023-12-22 13:49:21,524 DEBUG httpcore.connection close.complete
+2023-12-22 14:23:29,250 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: None, count: 200
+2023-12-22 14:23:32,956 DEBUG root request_inference_distilbert function called
+2023-12-22 14:23:32,958 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:23:32,958 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:23:32,965 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=5.0 socket_options=None
+2023-12-22 14:23:32,966 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fa9ccf7e190>
+2023-12-22 14:23:32,966 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:23:32,966 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:23:32,966 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:23:32,966 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:23:32,966 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:23:32,985 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 14:23:32 GMT'), (b'server', b'uvicorn'), (b'content-length', b'27'), (b'content-type', b'application/json')])
+2023-12-22 14:23:32,985 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 14:23:32,986 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 14:23:32,986 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 14:23:32,986 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:23:32,986 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:23:32,986 DEBUG httpcore.connection close.started
+2023-12-22 14:23:32,987 DEBUG httpcore.connection close.complete
+2023-12-22 14:23:36,322 DEBUG root request_inference_distilbert function called
+2023-12-22 14:23:36,324 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:23:36,324 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:23:36,332 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=5.0 socket_options=None
+2023-12-22 14:23:36,332 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fa9ccf7fb50>
+2023-12-22 14:23:36,332 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:23:36,332 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:23:36,333 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:23:36,333 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:23:36,333 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:23:36,352 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 14:23:35 GMT'), (b'server', b'uvicorn'), (b'content-length', b'27'), (b'content-type', b'application/json')])
+2023-12-22 14:23:36,352 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 14:23:36,352 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 14:23:36,352 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 14:23:36,352 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:23:36,352 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:23:36,353 DEBUG httpcore.connection close.started
+2023-12-22 14:23:36,353 DEBUG httpcore.connection close.complete
+2023-12-22 14:23:42,268 DEBUG root request_inference_distilbert function called
+2023-12-22 14:23:42,270 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:23:42,270 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:23:42,278 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=5.0 socket_options=None
+2023-12-22 14:23:42,278 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fa9cd1978d0>
+2023-12-22 14:23:42,279 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:23:42,279 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:23:42,279 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:23:42,279 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:23:42,279 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:23:47,281 DEBUG httpcore.http11 receive_response_headers.failed exception=ReadTimeout(TimeoutError())
+2023-12-22 14:23:47,282 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:23:47,282 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:25:08,328 DEBUG asyncio Using selector: EpollSelector
+2023-12-22 14:26:31,165 DEBUG asyncio Using selector: EpollSelector
+2023-12-22 14:26:38,614 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: None, count: 200
+2023-12-22 14:26:51,702 DEBUG root request_inference_distilbert function called
+2023-12-22 14:26:51,704 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:26:51,704 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:26:51,710 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 14:26:51,710 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d9b0b7d0>
+2023-12-22 14:26:51,711 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:26:51,711 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:26:51,711 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:26:51,711 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:26:51,711 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:26:58,837 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'date', b'Fri, 22 Dec 2023 14:26:51 GMT'), (b'server', b'uvicorn'), (b'content-length', b'21'), (b'content-type', b'text/plain; charset=utf-8')])
+2023-12-22 14:26:58,837 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 500 Internal Server Error"
+2023-12-22 14:26:58,837 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 14:26:58,838 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 14:26:58,838 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:26:58,838 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:26:58,838 DEBUG httpcore.connection close.started
+2023-12-22 14:26:58,838 DEBUG httpcore.connection close.complete
+2023-12-22 14:28:20,081 DEBUG root request_inference_distilbert function called
+2023-12-22 14:28:20,082 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:28:20,082 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:28:20,089 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 14:28:20,091 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d9b36390>
+2023-12-22 14:28:20,091 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:28:20,091 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:28:20,091 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:28:20,091 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:28:20,092 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:28:20,111 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 14:28:19 GMT'), (b'server', b'uvicorn'), (b'content-length', b'27'), (b'content-type', b'application/json')])
+2023-12-22 14:28:20,111 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 14:28:20,111 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 14:28:20,111 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 14:28:20,111 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:28:20,112 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:28:20,112 DEBUG httpcore.connection close.started
+2023-12-22 14:28:20,112 DEBUG httpcore.connection close.complete
+2023-12-22 14:28:31,041 DEBUG root request_inference_distilbert function called
+2023-12-22 14:28:31,042 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:28:31,042 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:28:31,050 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 14:28:31,051 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d9876190>
+2023-12-22 14:28:31,051 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:28:31,051 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:28:31,051 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:28:31,051 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:28:31,051 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:28:31,069 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 14:28:30 GMT'), (b'server', b'uvicorn'), (b'content-length', b'27'), (b'content-type', b'application/json')])
+2023-12-22 14:28:31,069 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 14:28:31,069 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 14:28:31,069 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 14:28:31,069 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:28:31,070 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:28:31,070 DEBUG httpcore.connection close.started
+2023-12-22 14:28:31,070 DEBUG httpcore.connection close.complete
+2023-12-22 14:29:05,393 DEBUG root request_inference_distilbert function called
+2023-12-22 14:29:05,394 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:29:05,395 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:29:05,402 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 14:29:05,403 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d9989150>
+2023-12-22 14:29:05,403 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:29:05,403 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:29:05,403 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:29:05,403 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:29:05,403 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:29:05,426 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 14:29:05 GMT'), (b'server', b'uvicorn'), (b'content-length', b'27'), (b'content-type', b'application/json')])
+2023-12-22 14:29:05,427 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 14:29:05,427 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 14:29:05,427 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 14:29:05,427 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:29:05,427 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:29:05,427 DEBUG httpcore.connection close.started
+2023-12-22 14:29:05,427 DEBUG httpcore.connection close.complete
+2023-12-22 14:30:03,859 DEBUG root request_inference_distilbert function called
+2023-12-22 14:30:03,861 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:30:03,861 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:30:03,870 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 14:30:03,871 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d998ad10>
+2023-12-22 14:30:03,872 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:30:03,872 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:30:03,872 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:30:03,872 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:30:03,872 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:30:03,892 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 14:30:03 GMT'), (b'server', b'uvicorn'), (b'content-length', b'27'), (b'content-type', b'application/json')])
+2023-12-22 14:30:03,892 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 14:30:03,892 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 14:30:03,892 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 14:30:03,892 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:30:03,892 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:30:03,892 DEBUG httpcore.connection close.started
+2023-12-22 14:30:03,892 DEBUG httpcore.connection close.complete
+2023-12-22 14:30:21,560 DEBUG root request_inference_distilbert function called
+2023-12-22 14:30:21,561 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:30:21,561 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:30:21,569 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 14:30:21,569 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d99a48d0>
+2023-12-22 14:30:21,569 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:30:21,569 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:30:21,569 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:30:21,570 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:30:21,570 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:30:21,591 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 14:30:20 GMT'), (b'server', b'uvicorn'), (b'content-length', b'27'), (b'content-type', b'application/json')])
+2023-12-22 14:30:21,591 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 14:30:21,591 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 14:30:21,591 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 14:30:21,591 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:30:21,591 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:30:21,592 DEBUG httpcore.connection close.started
+2023-12-22 14:30:21,592 DEBUG httpcore.connection close.complete
+2023-12-22 14:35:00,010 DEBUG root request_inference_distilbert function called
+2023-12-22 14:35:00,011 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:35:00,012 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:35:00,019 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 14:35:00,024 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d996d590>
+2023-12-22 14:35:00,024 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:35:00,024 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:35:00,024 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:35:00,024 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:35:00,024 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:35:00,049 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 14:34:59 GMT'), (b'server', b'uvicorn'), (b'content-length', b'27'), (b'content-type', b'application/json')])
+2023-12-22 14:35:00,049 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 14:35:00,049 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 14:35:00,049 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 14:35:00,050 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:35:00,050 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:35:00,050 DEBUG httpcore.connection close.started
+2023-12-22 14:35:00,050 DEBUG httpcore.connection close.complete
+2023-12-22 14:35:48,343 DEBUG root request_inference_distilbert function called
+2023-12-22 14:35:48,343 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:35:48,344 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:35:48,348 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 14:35:48,349 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d9a55e10>
+2023-12-22 14:35:48,349 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:35:48,349 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:35:48,349 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:35:48,349 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:35:48,349 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:35:55,427 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 14:35:47 GMT'), (b'server', b'uvicorn'), (b'content-length', b'27'), (b'content-type', b'application/json')])
+2023-12-22 14:35:55,427 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 14:35:55,427 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 14:35:55,428 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 14:35:55,428 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:35:55,428 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:35:55,428 DEBUG httpcore.connection close.started
+2023-12-22 14:35:55,428 DEBUG httpcore.connection close.complete
+2023-12-22 14:56:48,444 DEBUG root request_inference_distilbert function called
+2023-12-22 14:56:48,445 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 14:56:48,446 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 14:56:48,455 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 14:56:48,455 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d9989690>
+2023-12-22 14:56:48,456 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 14:56:48,456 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 14:56:48,456 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 14:56:48,456 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 14:56:48,456 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 14:56:48,476 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 14:56:48 GMT'), (b'server', b'uvicorn'), (b'content-length', b'27'), (b'content-type', b'application/json')])
+2023-12-22 14:56:48,476 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 14:56:48,476 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 14:56:48,476 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 14:56:48,476 DEBUG httpcore.http11 response_closed.started
+2023-12-22 14:56:48,476 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 14:56:48,476 DEBUG httpcore.connection close.started
+2023-12-22 14:56:48,476 DEBUG httpcore.connection close.complete
+2023-12-22 15:04:31,522 DEBUG root request_inference_distilbert function called
+2023-12-22 15:04:31,523 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 15:04:31,524 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 15:04:31,532 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 15:04:31,532 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d98778d0>
+2023-12-22 15:04:31,532 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 15:04:31,532 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 15:04:31,533 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 15:04:31,533 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 15:04:31,533 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 15:04:31,552 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 15:04:31 GMT'), (b'server', b'uvicorn'), (b'content-length', b'23'), (b'content-type', b'application/json')])
+2023-12-22 15:04:31,553 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 15:04:31,553 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 15:04:31,553 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 15:04:31,553 DEBUG httpcore.http11 response_closed.started
+2023-12-22 15:04:31,553 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 15:04:31,553 DEBUG httpcore.connection close.started
+2023-12-22 15:04:31,553 DEBUG httpcore.connection close.complete
+2023-12-22 15:04:38,403 DEBUG root request_inference_distilbert function called
+2023-12-22 15:04:38,404 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 15:04:38,404 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 15:04:38,408 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 15:04:38,409 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d99a5d10>
+2023-12-22 15:04:38,409 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 15:04:38,410 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 15:04:38,410 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 15:04:38,410 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 15:04:38,410 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 15:04:44,547 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 15:04:37 GMT'), (b'server', b'uvicorn'), (b'content-length', b'604'), (b'content-type', b'application/json')])
+2023-12-22 15:04:44,548 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 15:04:44,548 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 15:04:44,548 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 15:04:44,548 DEBUG httpcore.http11 response_closed.started
+2023-12-22 15:04:44,548 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 15:04:44,548 DEBUG httpcore.connection close.started
+2023-12-22 15:04:44,548 DEBUG httpcore.connection close.complete
+2023-12-22 15:05:22,999 DEBUG root request_inference_distilbert function called
+2023-12-22 15:05:23,001 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 15:05:23,001 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 15:05:23,010 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 15:05:23,011 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f59d99a6e90>
+2023-12-22 15:05:23,011 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 15:05:23,011 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 15:05:23,011 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 15:05:23,012 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 15:05:23,012 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 15:05:29,687 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 15:05:22 GMT'), (b'server', b'uvicorn'), (b'content-length', b'604'), (b'content-type', b'application/json')])
+2023-12-22 15:05:29,688 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 15:05:29,688 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 15:05:29,688 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 15:05:29,688 DEBUG httpcore.http11 response_closed.started
+2023-12-22 15:05:29,688 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 15:05:29,688 DEBUG httpcore.connection close.started
+2023-12-22 15:05:29,689 DEBUG httpcore.connection close.complete
+2023-12-22 15:29:34,880 DEBUG asyncio Using selector: EpollSelector
+2023-12-22 15:30:26,922 DEBUG asyncio Using selector: EpollSelector
+2023-12-22 15:31:03,445 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: None, count: 20
+2023-12-22 15:31:15,925 DEBUG root request_inference_distilbert function called
+2023-12-22 15:31:15,926 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 15:31:15,926 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 15:37:01,978 DEBUG asyncio Using selector: EpollSelector
+2023-12-22 15:37:05,622 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: None, count: 20
+2023-12-22 15:37:08,609 DEBUG root request_inference_distilbert function called
+2023-12-22 15:37:08,610 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 15:37:08,611 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 15:37:08,623 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 15:37:08,624 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fd9da0e5190>
+2023-12-22 15:37:08,624 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 15:37:08,624 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 15:37:08,624 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 15:37:08,624 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 15:37:08,624 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 15:37:09,355 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 15:37:08 GMT'), (b'server', b'uvicorn'), (b'content-length', b'79'), (b'content-type', b'application/json')])
+2023-12-22 15:37:09,355 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 15:37:09,355 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 15:37:09,356 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 15:37:09,356 DEBUG httpcore.http11 response_closed.started
+2023-12-22 15:37:09,356 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 15:37:09,356 DEBUG httpcore.connection close.started
+2023-12-22 15:37:09,356 DEBUG httpcore.connection close.complete
+2023-12-22 15:37:29,498 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: 1, count: 50
+2023-12-22 15:37:33,501 DEBUG root request_inference_distilbert function called
+2023-12-22 15:37:33,502 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 15:37:33,503 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 15:37:33,510 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 15:37:33,511 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fd9da156190>
+2023-12-22 15:37:33,511 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 15:37:33,511 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 15:37:33,511 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 15:37:33,512 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 15:37:33,512 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 15:37:34,989 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 15:37:32 GMT'), (b'server', b'uvicorn'), (b'content-length', b'169'), (b'content-type', b'application/json')])
+2023-12-22 15:37:34,990 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 15:37:34,990 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 15:37:34,990 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 15:37:34,990 DEBUG httpcore.http11 response_closed.started
+2023-12-22 15:37:34,990 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 15:37:34,990 DEBUG httpcore.connection close.started
+2023-12-22 15:37:34,990 DEBUG httpcore.connection close.complete
+2023-12-22 15:37:41,413 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: 5, count: 50
+2023-12-22 15:37:45,137 DEBUG root request_inference_distilbert function called
+2023-12-22 15:37:45,137 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 15:37:45,137 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 15:37:45,141 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 15:37:45,142 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fd9da2b6550>
+2023-12-22 15:37:45,142 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 15:37:45,142 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 15:37:45,142 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 15:37:45,142 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 15:37:45,142 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 15:37:46,556 DEBUG httpcore.http11 receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 22 Dec 2023 15:37:44 GMT'), (b'server', b'uvicorn'), (b'content-length', b'137'), (b'content-type', b'application/json')])
+2023-12-22 15:37:46,556 INFO httpx HTTP Request: POST http://10.60.37.147:8080/inference/sentiment "HTTP/1.1 200 OK"
+2023-12-22 15:37:46,556 DEBUG httpcore.http11 receive_response_body.started request=<Request [b'POST']>
+2023-12-22 15:37:46,556 DEBUG httpcore.http11 receive_response_body.complete
+2023-12-22 15:37:46,556 DEBUG httpcore.http11 response_closed.started
+2023-12-22 15:37:46,556 DEBUG httpcore.http11 response_closed.complete
+2023-12-22 15:37:46,557 DEBUG httpcore.connection close.started
+2023-12-22 15:37:46,557 DEBUG httpcore.connection close.complete
+2023-12-22 15:38:05,630 DEBUG root app_data function called with url: https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en, stars: None, count: 3000
+2023-12-22 15:38:14,095 DEBUG root request_inference_distilbert function called
+2023-12-22 15:38:14,106 DEBUG httpx load_ssl_context verify=True cert=None trust_env=True http2=False
+2023-12-22 15:38:14,107 DEBUG httpx load_verify_locations cafile='/usr/local/lib/python3.11/site-packages/certifi/cacert.pem'
+2023-12-22 15:38:14,118 DEBUG httpcore.connection connect_tcp.started host='10.60.37.147' port=8080 local_address=None timeout=60 socket_options=None
+2023-12-22 15:38:14,118 DEBUG httpcore.connection connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fd9daaaf750>
+2023-12-22 15:38:14,118 DEBUG httpcore.http11 send_request_headers.started request=<Request [b'POST']>
+2023-12-22 15:38:14,119 DEBUG httpcore.http11 send_request_headers.complete
+2023-12-22 15:38:14,119 DEBUG httpcore.http11 send_request_body.started request=<Request [b'POST']>
+2023-12-22 15:38:14,119 DEBUG httpcore.http11 send_request_body.complete
+2023-12-22 15:38:14,119 DEBUG httpcore.http11 receive_response_headers.started request=<Request [b'POST']>
+2023-12-22 15:39:14,121 DEBUG httpcore.http11 receive_response_headers.failed exception=ReadTimeout(TimeoutError())
+2023-12-22 15:39:14,121 DEBUG httpcore.http11 response_closed.started
+2023-12-22 15:39:14,121 DEBUG httpcore.http11 response_closed.complete

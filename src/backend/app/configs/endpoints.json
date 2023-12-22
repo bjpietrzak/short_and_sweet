@@ -1,6 +1,6 @@
 {
     "bertopic": "http://0.0.0.0:8080/inference/bertopic",
-    "distilbert": "http://0.0.0.0:8080/inference/distilbert",
+    "distilbert": "http://10.60.37.147:8080/inference/sentiment",
     "negative": -1,
     "neutral": 0,
     "positive": 1

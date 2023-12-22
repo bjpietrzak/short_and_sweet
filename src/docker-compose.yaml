@@ -1,4 +1,4 @@
-version: '1'
+version: "2.2"
 services:
   cache:
     image: redis:6.2-alpine
@@ -6,16 +6,23 @@ services:
     ports:
       - 6379:6379
     command: redis-server --save "" --appendonly no
+
+  # sentiment_endpoint:
+  #   build: ai/sentiment_classifier/
+  #   image: topic_generation:latest
+  #   ports:
+  #     - 8080:8080
+  #   volumes:
+  #     - ./ai/sentiment_classifier/app:/app
+  #   command: "python main.py"
+
   backend:
     build: backend/
     image: backend:latest
     ports:
       - 7001:7001
-      - 8080:8080
     volumes:
       - ./backend/app:/app
     depends_on:
       - cache
     command: "python main.py"
-
-# hi
