@@ -14,5 +14,12 @@ number_of_reviews = {
 clusters = {
 0:"phone_app_service_picture",
 1:"instagram_time_bad_habbit",
-2:"cant_open_camera_error"
+2:"cant_open_camera_error",
+3:"Lorem ipsum dolor sit amet",
+4:"Lorem ipsum dolor sit amet",
+5:"Lorem ipsum dolor sit amet",
+6:"Lorem ipsum dolor sit amet",
+7:"Lorem ipsum dolor sit amet",
+8:"Lorem ipsum dolor sit amet",
+9:"Lorem ipsum dolor sit amet"
 }
