@@ -3,8 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 import lorem
 import random
 
-from . import number_of_reviews, clusters
-from app.schemas import AppData, DistilBertResponse, \
+from load_dependencies import number_of_reviews, clusters
+from schemas import AppData, DistilBertResponse, \
                         BertopicInferenceResponse, ClusterReviews
 
 

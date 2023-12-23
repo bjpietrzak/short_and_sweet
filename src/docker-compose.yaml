@@ -1,11 +1,11 @@
 version: '0'
 services:
   backend:
-    build:
-      context: .
-      dockerfile: ./backend/Dockerfile
-    image: backend
+    build: backend/
+    image: backend:latest
     ports:
       - "7001:7001"
+    volumes:
+      - ./backend/app:/app
     restart: always
-    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7001"]
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7001"]
