@@ -2,7 +2,7 @@ version: '0'
 services:
   backend:
     build: backend/
-    image: backend:latest
+    image: backend
     ports:
       - "7001:7001"
     volumes:
